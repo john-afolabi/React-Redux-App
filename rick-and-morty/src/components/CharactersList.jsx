@@ -9,7 +9,7 @@ export function CharactersList({ getChars, characters }) {
   }, []);
 
   return (
-    <div>
+    <div className="card-container">
       {characters.map(char => {
         return <CharacterCard char={char} key={char.id} />;
       })}

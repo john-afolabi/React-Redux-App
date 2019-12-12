@@ -1,10 +1,13 @@
-import React from 'react';
-import './App.css';
-import CharactersList from './components/CharactersList';
+import React from "react";
+import "./App.css";
+import CharactersList from "./components/CharactersList";
+import { Container } from "reactstrap";
 
 function App() {
   return (
-    <CharactersList/>
+    <Container>
+      <CharactersList />
+    </Container>
   );
 }
 
