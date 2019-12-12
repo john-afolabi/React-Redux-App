@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as types from "./actionTypes";
 
-export const getChar = () => dispatch => {
+export const getChars = () => dispatch => {
   axios
     .get("https://rickandmortyapi.com/api/character/")
     .then(res => {

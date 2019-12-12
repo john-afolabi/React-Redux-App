@@ -4,13 +4,16 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import thunk from "redux-thunk";
-import { createStore, compose, applyMiddleware } from "redux";
+import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { charactersReducer } from "./state/reducers";
-import thunk from "redux-thunk";
+
+const allReducers = combineReducers({
+  characters: charactersReducer
+});
 
 const store = createStore(
-  charactersReducer,
+  allReducers,
   {},
   compose(
     applyMiddleware(thunk),
